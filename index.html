@@ -1,57 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Organizer</title>
-    <link rel="stylesheet" href="styles.css">
-    <script src="https://unpkg.com/lucide@latest"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Video Organizer</title>
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/lucide@latest"></script>
 </head>
 <body>
-    <div class="app-container">
-        <aside class="sidebar">
-            <div class="logo">
-                <i data-lucide="video"></i>
-                <span>VideoVault</span>
-            </div>
-            <nav>
-                <ul>
-                    <li class="active"><i data-lucide="home"></i> Home</li>
-                    <li><i data-lucide="folder"></i> My Folders</li>
-                    <li><i data-lucide="film"></i> All Videos</li>
-                </ul>
-            </nav>
-            <div class="made-by">Made with ❤️ by Soham</div>
-        </aside>
-        <main>
-            <header>
-                <button class="mobile-menu-toggle" id="mobile-menu-toggle">
-                    <i data-lucide="menu"></i>
-                </button>
-                <div class="search-bar">
-                    <i data-lucide="search"></i>
-                    <input type="text" id="searchInput" placeholder="Search videos or folders...">
-                </div>
-                <button id="theme-toggle" class="btn">
-                    <i data-lucide="sun" class="sun-icon"></i>
-                    <i data-lucide="moon" class="moon-icon"></i>
-                </button>
-            </header>
-            <div class="content">
-                <h1>My Videos</h1>
-                <div class="actions">
-                    <button id="newFolderBtn" class="btn"><i data-lucide="folder-plus"></i> New Folder</button>
-                    <button id="uploadVideoBtn" class="btn primary"><i data-lucide="upload"></i> Upload Video</button>
-                </div>
-                <div id="grid" class="grid">
-                    <!-- Folders and videos will be dynamically added here -->
-                </div>
-            </div>
-        </main>
-    </div>
-    <input type="file" id="fileInput" accept="video/*" style="display: none;">
-    <script src="script.js"></script>
-    <script src="theme-switcher.js"></script>
+  <!-- Removed the top nav/header entirely to avoid duplication -->
+
+  <div class="app-container">
+    <aside class="sidebar">
+      <div class="logo">
+        <i data-lucide="video"></i>
+        <span>VideoVault</span>
+      </div>
+      <nav>
+        <ul>
+          <!-- These are the main navigation buttons that actually work -->
+          <li class="active"><i data-lucide="home"></i> Home</li>
+          <li><i data-lucide="folder"></i> My Folders</li>
+          <li><i data-lucide="film"></i> All Videos</li>
+        </ul>
+      </nav>
+      <div class="made-by">Made with ❤️ by Soham</div>
+    </aside>
+
+    <main>
+      <!-- If you still want a search bar, uncomment this block:
+      <div class="search-bar">
+        <i data-lucide="search"></i>
+        <input type="text" id="searchInput" placeholder="Search videos or folders..." />
+      </div>
+      -->
+      <div class="content">
+        <h1>My Videos</h1>
+        <div class="actions">
+          <button id="newFolderBtn" class="btn">
+            <i data-lucide="folder-plus"></i> New Folder
+          </button>
+          <button id="uploadVideoBtn" class="btn primary">
+            <i data-lucide="upload"></i> Upload Video
+          </button>
+        </div>
+        <div id="grid" class="grid">
+          <!-- Folders and videos will be dynamically added here -->
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <input type="file" id="fileInput" accept="video/*" style="display: none;" />
+  <script src="script.js"></script>
 </body>
 </html>
-
